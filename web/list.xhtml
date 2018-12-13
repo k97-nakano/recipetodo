@@ -15,7 +15,7 @@
                     <f:facet name="header">おかいものリスト</f:facet>
                     <h:column headerClass="hd2">
                         <f:facet name="header">かうもの</f:facet>
-                        <h:commandLink action="#{bb.edit(m)}" rendered="#{!m.editable}">
+                        <h:commandLink action="#{bb.delete(m)}" rendered="#{!m.editable}">
                             <h:outputText value="#{m.title}" rendered="#{!m.editable}"/>
                         </h:commandLink>
                         <h:inputText	value="#{m.title}" rendered="#{m.editable}" size="29" styleClass="inp"/>

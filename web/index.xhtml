@@ -5,6 +5,10 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
+        <div align="center">
+            <h:graphicImage library="img" name="logo.png"/>
+        </div>
+        
         <title>R3A218</title>
         <h:outputStylesheet name="mystyle.css" library="css" />
     </h:head>
@@ -13,9 +17,16 @@
             <a href="/r3a218/faces/list.xhtml">かうものリスト</a>
             <a href="https://sm.rakuten.co.jp/">ネットスーパー</a>
             <a href="https://recipe.rakuten.co.jp/sp2/shungohan/">旬のごはん</a>
+            <h:form>
+            <h:commandLink action="https://sm.rakuten.co.jp/" value="ネットスーパー"/>
+            
+            <h:commandButton value="ネットスーパー"/>
+            </h:form>
             <hr/>
             
-            <h:graphicImage library="img" name="rakuten.png"/>
+            
+                powered&nbsp;by&nbsp;Rakuten
+            
         </div>
     </h:body>
 </html>

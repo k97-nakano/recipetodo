@@ -1,15 +1,10 @@
 package beans;
 
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
-import util.ItemUtil;
 
 /**
  *
@@ -62,18 +57,16 @@ public class Bb implements Serializable {
     private List<Item> item;
     
     {	
-        item = ItemUtil.getList("/resources/data/Item.csv");
+        item = new ArrayList<>();	// Listを生成してデータをセット
+        item.add(new Item("じゃがいも","80","スーパー１","2019-01-01"));
+        item.add(new Item("たまねぎ","70","スーパー２","2019-01-02"));
+        item.add(new Item("にんじん","60","スーパー３","2019-01-03"));
+        item.add(new Item("ぶたにく","50","スーパー４","2019-01-04"));
+        item.add(new Item("しらたき","40","スーパー４","2019-01-05"));
     }
     
      public String next() {
         
-        return null;
-    }
-
-    public String edit(Item item) {
-        Item it = (Item) item;
-        Boolean editable = it.isEditable();
-        it.setEditable(!editable);
         return null;
     }
 
@@ -85,14 +78,29 @@ public class Bb implements Serializable {
         this.item = item;
     }
     
+    public String edit(Item item) {
+        Item it = (Item) item;
+        Boolean editable = it.isEditable();
+        it.setEditable(!editable);
+        return null;
+    }
+    
     public String add(){
-        try {
+        /*try {
+            File f = new File("C:\\Users\\s20164040\\Documents\\NetBeansProjects\\R3A218\\web\\resources\\data\\Item.csv");
+            OutputStreamWriter osw  = new OutputStreamWriter(new FileOutputStream(f), "UTF-8");
+            BufferedWriter bw = new BufferedWriter(osw);
+            
+            bw.newLine();
+            bw.write(title+","+num+","+place+","+time);
+            
+
+            bw.close();
             
             
+            FileWriter file = new FileWriter("C:\\Users\\s20164040\\Documents\\NetBeansProjects\\R3A218\\web\\resources\\data\\Item.csv", true);
             
-            FileWriter file = new FileWriter("C:\\Users\\hcs_20164040\\Documents\\NetBeansProjects\\r3a218\\web\\resources\\data\\Item.csv", true);
-            
-            PrintWriter p = new PrintWriter(new BufferedWriter(file),"UTF-8");
+            PrintWriter p = new PrintWriter(new BufferedWriter(file));
             
             //ファイルに書き込む
             p.println();
@@ -110,7 +118,21 @@ public class Bb implements Serializable {
             System.out.print("エラー3");
         }
         System.out.print("エラー4");
-        item = ItemUtil.getList("/resources/data/Item.csv");
+        item = ItemUtil.getList("/resources/data/Item.csv");*/
+        
+        item.add(new Item(title,num,place,time));
+        
+        //入力欄の初期化
+        title=null;
+        num=null;
+        place=null;
+        time=null;
+        
+        return null;
+    }
+    
+    public String delete(Item item){
+        this.item.remove(item);
         return null;
     }
     

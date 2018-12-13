@@ -16,17 +16,12 @@ public class Item {
         
     }
     
-    public Item(String[] s){
+    public Item(String title, String num, String place, String time){
         
-        this.title = s[0] != null ? s[0] : "";
-        this.num = s[1] != null ? s[1] : "";
-        this.place = s[2] != null ? s[2] : "";
-        this.time = s[3] != null ? s[3] : "";
-    }
-    
-    @Override
-    public String toString(){
-        return title + "/" + num + "/" + place + "/" + time;
+        this.title = title;
+        this.num = num;
+        this.place = place;
+        this.time = time;
     }
 
     public String getTitle() {

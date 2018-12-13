@@ -47,3 +47,29 @@ body {
     width: 50px;
     height: 50px;
 }
+
+.girly_btn_5 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2ex;
+    outline: 0;
+    overflow: hidden;
+    color: #fff;/* 文字の色 */
+    background: #f08080;/* ボタン背景色 */
+    width: 200px;/* 円の大きさ */
+    height:200px;/* 円の大きさ */
+    line-height:200px;/* 円の大きさ */
+    border-radius: 50%;/* 角丸サイズ */
+    box-shadow: 0 0 0 5px #f08080, 0 2px 3px 5px rgba(0,0,0,0.5);/* 縁取り・影 */
+    border: 2px dashed #fff;/* 点線の色・サイズ */
+    margin: 0px 20px;
+    transition: .6s;
+}
+
+.girly_btn_5:hover{
+    -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+}

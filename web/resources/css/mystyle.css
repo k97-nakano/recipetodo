@@ -3,6 +3,7 @@ body {
     font-size: 12pt;
     margin: 10px 10px 10px 20px;
     line-height: 2.0em;
+    background-image: url("../img/bg01.jpg");
 }
 
 .hd1 {

@@ -3,7 +3,16 @@ body {
     font-size: 12pt;
     margin: 10px 10px 10px 20px;
     line-height: 2.0em;
-    background-image: url("../img/bg01.jpg");
+}
+
+body {
+    
+    
+    width: 100%;
+    height: 12px;
+    margin: 0px;
+    padding: 0px;
+    background: url(../img/bg01.jpg) repeat-x center top;
 }
 
 .hd1 {
@@ -35,13 +44,13 @@ body {
     padding-left: 10px;			
 }
 .c5	{
-    width: 50px;				
+    width: 80px;				
     text-align: center;			
 }
 .inp {
     font-family: メイリオ ,Osaka;	
     font-size: 1.0em;				
-    border: none;					
+    border: 1px solid #DDD;
 }
 
 .img_01{
@@ -50,15 +59,17 @@ body {
 }
 
 .girly_btn_5 {
+    
     position: relative;
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    font-size: 2ex;
+    font-size: 3ex;
     outline: 0;
     overflow: hidden;
     color: #fff;/* 文字の色 */
     background: #f08080;/* ボタン背景色 */
+    background-image: url('');
     width: 200px;/* 円の大きさ */
     height:200px;/* 円の大きさ */
     line-height:200px;/* 円の大きさ */
@@ -67,11 +78,62 @@ body {
     border: 2px dashed #fff;/* 点線の色・サイズ */
     margin: 0px 20px;
     transition: 1.5s;
-    background-image: url("../img/recipelogo.png");
 }
 
 .girly_btn_5:hover{
     -webkit-transform: rotateY(360deg);
     -ms-transform: rotateY(360deg);
     transform: rotateY(360deg);
+}
+
+h2{
+    font-size: 1.2em;/* 文字の大きさ */
+    font-weight: bold;/* 文字の太さ */
+    color: #fff;/* 文字の色 */
+    border: 2px dashed #ffecef;/* ステッチの太さ・種類・カラー */
+    background: #F9B8CD;/* 背景色 */
+    border-radius: 8px;/* 四隅の丸み */
+    box-shadow: 0 0 3px 3px #F9B8CD;
+    margin: 0 0 1.5em;
+    padding: 0.5em 0.8em;
+}
+ 
+p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 60px auto 40px;
+}
+table {
+  margin: 20px auto;
+}
+.tbl-r02 th {
+  background: #e9727e;
+  border: solid 1px #ccc;
+  color: #fff;
+  padding: 10px;
+}
+.tbl-r02 td {
+　border: solid 1px #ccc;
+  padding: 10px;
+}
+ 
+@media screen and (max-width: 640px) {
+  .last td:last-child {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+  .tbl-r02 {
+    width: 80%;
+  }
+  .tbl-r02 th,
+  .tbl-r02 td {
+　　border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+}
+
+.batu {
+    background-image: url('img/batu.png');
 }

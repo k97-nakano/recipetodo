@@ -86,39 +86,6 @@ public class Bb implements Serializable {
     }
     
     public String add(){
-        /*try {
-            File f = new File("C:\\Users\\s20164040\\Documents\\NetBeansProjects\\R3A218\\web\\resources\\data\\Item.csv");
-            OutputStreamWriter osw  = new OutputStreamWriter(new FileOutputStream(f), "UTF-8");
-            BufferedWriter bw = new BufferedWriter(osw);
-            
-            bw.newLine();
-            bw.write(title+","+num+","+place+","+time);
-            
-
-            bw.close();
-            
-            
-            FileWriter file = new FileWriter("C:\\Users\\s20164040\\Documents\\NetBeansProjects\\R3A218\\web\\resources\\data\\Item.csv", true);
-            
-            PrintWriter p = new PrintWriter(new BufferedWriter(file));
-            
-            //ファイルに書き込む
-            p.println();
-            p.print(title+","+num+","+place+","+time);
-            
-            System.out.print("エラー１");
-            //ファイルを閉じる
-            p.close();
-            System.out.print("エラー2");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();    
-        System.out.print("エラー5");
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.print("エラー3");
-        }
-        System.out.print("エラー4");
-        item = ItemUtil.getList("/resources/data/Item.csv");*/
         
         item.add(new Item(title,num,place,time));
         
